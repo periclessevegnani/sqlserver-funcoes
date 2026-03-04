@@ -1,5 +1,5 @@
-```sql
 -- A funcao abaixo retorna uma data valida e tem como parametro o valor do timestamp.
+
 CREATE FUNCTION dbo.FNUnixDateTime
 (@Segundos BIGINT)
 RETURNS DATETIME
@@ -26,4 +26,4 @@ BEGIN
   
   RETURN @Retorno
 END
-```
+go
