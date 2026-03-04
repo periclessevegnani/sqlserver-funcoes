@@ -1,4 +1,6 @@
--- A funcao abaixo calcula a distancia em KM a partir de 2 coordenadas geograficas, considerando a curvatura do planeta (sorry flat-earthers!)
+-- A funcao abaixo calcula a distancia em KM a partir de 2 coordenadas geograficas.
+-- Ela considera a curvatura do planeta (sorry flat-earthers!).
+-- Esse calculo eh conhecido como Formula de Haversine.
 
 CREATE FUNCTION dbo.FNDistanciaCoordenadasKm
 (@Latitude1 NUMERIC(20,8), 
@@ -6,7 +8,6 @@ CREATE FUNCTION dbo.FNDistanciaCoordenadasKm
  @Latitude2 NUMERIC(20,8),
  @Longitude2 NUMERIC(20,8))
 RETURNS NUMERIC(20,8)
-WITH ENCRYPTION, SCHEMABINDING
 AS  
 BEGIN 
   DECLARE @Retorno NUMERIC(20,8)
